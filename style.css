@@ -143,14 +143,14 @@ p {
 }
 
 .header-shell {
-  position: relative;
+  /* Match the wide desktop hero container so the logo and navigation
+     align with the left and right edges of the hero content below. */
   width: min(1480px, calc(100% - 48px));
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .brand {
@@ -166,7 +166,7 @@ p {
 
 .header-logo {
   display: block;
-  width: clamp(260px, 21vw, 370px);
+  width: clamp(210px, 18vw, 315px);
   height: auto;
   object-fit: contain;
 }
@@ -215,14 +215,7 @@ p {
 .primary-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.035);
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
-  backdrop-filter: blur(12px);
+  gap: 8px;
 }
 
 .nav-link {
@@ -271,7 +264,7 @@ p {
 .hero {
   position: relative;
   min-height: 100svh;
-  padding: 220px 0 92px;
+  padding: 150px 0 92px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1136,28 +1129,19 @@ p {
     padding: 12px 0;
   }
 
-  .header-shell {
-    min-height: 64px;
-    gap: 0;
-  }
-
   .header-logo {
-    width: clamp(205px, 58vw, 265px);
+    width: clamp(180px, 48vw, 245px);
   }
 
   .nav-toggle {
-    position: absolute;
-    right: 0;
-    top: 50%;
     display: block;
-    transform: translateY(-50%);
   }
 
   .primary-nav {
     position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    left: 0;
+    top: calc(100% + 8px);
+    right: 14px;
+    left: 14px;
     padding: 12px;
     display: none;
     align-items: stretch;
@@ -1178,7 +1162,7 @@ p {
 
   .hero {
     min-height: auto;
-    padding: 152px 0 100px;
+    padding: 132px 0 100px;
   }
 
   .hero-copy h1 {
