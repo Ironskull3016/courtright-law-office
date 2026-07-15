@@ -302,21 +302,32 @@ p {
 }
 
 .hero-content {
+  width: min(1480px, calc(100% - 48px));
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.74fr);
-  gap: clamp(48px, 7vw, 105px);
+  grid-template-columns: minmax(0, 1.28fr) minmax(390px, 0.72fr);
+  gap: clamp(42px, 5vw, 82px);
   align-items: center;
 }
 
 .hero-copy h1 {
   margin-bottom: 28px;
-  max-width: 780px;
+  max-width: none;
   font-size: clamp(4rem, 8.5vw, 8rem);
   line-height: 0.82;
 }
 
-.hero-copy h1 span {
+.hero-line {
   display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.hero-line-white {
+  color: var(--text);
+}
+
+.hero-line-gold {
   color: var(--gold-light);
 }
 
@@ -410,6 +421,7 @@ p {
 
 .hero-visual {
   position: relative;
+  margin-top: -24px;
 }
 
 .photo-frame {
@@ -424,7 +436,7 @@ p {
 }
 
 .hero-photo-placeholder {
-  min-height: 610px;
+  min-height: 670px;
 }
 
 .attorney-photo-placeholder {
@@ -1007,6 +1019,14 @@ p {
     padding-top: 135px;
   }
 
+  .hero-content {
+    width: var(--shell);
+  }
+
+  .hero-visual {
+    margin-top: 0;
+  }
+
   .hero-content,
   .attorney-layout,
   .modal-about-layout,
@@ -1121,7 +1141,12 @@ p {
   }
 
   .hero-copy h1 {
-    font-size: clamp(3.7rem, 17vw, 5.5rem);
+    font-size: clamp(3.35rem, 15.5vw, 5.5rem);
+  }
+
+  .hero-line {
+    width: auto;
+    max-width: none;
   }
 
   .hero-actions {
