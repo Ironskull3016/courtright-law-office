@@ -160,6 +160,17 @@ p {
   text-decoration: none;
 }
 
+.brand-logo-link {
+  flex-shrink: 0;
+}
+
+.header-logo {
+  display: block;
+  width: clamp(210px, 18vw, 315px);
+  height: auto;
+  object-fit: contain;
+}
+
 .brand-mark {
   width: 54px;
   aspect-ratio: 1;
@@ -1118,12 +1129,8 @@ p {
     padding: 12px 0;
   }
 
-  .brand-subtitle {
-    display: none;
-  }
-
-  .brand-mark {
-    width: 46px;
+  .header-logo {
+    width: clamp(180px, 48vw, 245px);
   }
 
   .nav-toggle {
